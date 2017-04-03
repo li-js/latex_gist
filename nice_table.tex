@@ -1,0 +1,30 @@
+% For formal tables:
+\usepackage{booktabs}  % enables \toprule \midrule and \bottomrule
+
+% Enable self-defined tab width:
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+% A example: 
+\begin{document}
+\begin{table}[h]\setlength{\tabcolsep}{2pt}  %set minimal width for all tabs
+\caption{Sample}\label{tab:sample}
+\begin{tabular}{L{19mm}cccccc} % no vertical rules
+\toprule
+NME(\%)& L.Eye & R.Eye & Nose & L.Mouth & R.Mouth & Mean  \\ 
+\midrule
+TSPM & 14.5 &9.5 &21.7 &19.5 &14.3 &15.9 \\
+ESR & 11.9 &11.2 &12.1 &11.9 &14.9 &12.4 \\
+CDM& 10.1 &10.8 &15.0 &14.6 &14.9 &13.1 \\
+RCPR& 11.8 &10.6 &13.5 &11.3 &10.8 &11.6 \\
+SDM& 8.2 &9.3 &11.2 &6.7 &7.1 &8.5 \\
+TCDCN & 7.9 &8.2 &8.5 &7.9 &7.6 &8.0 \\
+MTCNN & 6.7 &6.7 &7.7 &7.0 &6.4 &6.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{document}
+
